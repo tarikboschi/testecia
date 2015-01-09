@@ -817,8 +817,9 @@ tr.pager td {
     display: block;
     float: left;
     height: 79px;
-    width: 247px;
-    margin-bottom:17px;
+    margin-bottom: 6px;
+    margin-top: 22px;
+    width: 322px;
 }
 
 .form-width
