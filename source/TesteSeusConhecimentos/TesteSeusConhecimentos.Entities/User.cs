@@ -25,7 +25,7 @@ namespace TesteSeusConhecimentos.Entities
             this.Email = email;
         }
 
-        public bool IsNew()
+        public virtual bool IsNew()
         {
             return this.IdUser == 0;
         }
