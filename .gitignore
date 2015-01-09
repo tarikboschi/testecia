@@ -110,7 +110,6 @@ AppPackages/
 # Others
 sql/
 *.Cache
-*.cache
 ClientBin/
 [Ss]tyle[Cc]op.*
 ~$*
@@ -150,7 +149,3 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
-source/slnELojaCrescaBrasil/WebAluno/ClassDiagram1.cd
-*.StyleCop
-*.nupkg
-*.nuspec
