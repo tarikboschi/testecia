@@ -25,7 +25,7 @@
         </li>
 
         <li class="three">
-           Além disso, você deverá implementar uma funcionalidade que possibilita o relacionamento entre <b>Empresas</b> e <b>Clientes</b> conforme ilustrado na <b>Figura 1</b>. O protótipo da tela responsável
+           Além disso, você deverá implementar uma funcionalidade que possibilita o relacionamento entre <b>Empresas</b> e <b>Funcionários</b> conforme ilustrado na <b>Figura 1</b>. O protótipo da tela responsável
            pelo relacionamento é ilustrado na <b> Figura 2 </b>;
         </li>
         
@@ -36,8 +36,7 @@
         </li> 
         
         <li class="five">
-            <b>Lembre-se:</b> Você poderá perguntar aos examinadores somente questões relacionadas com as <b>Regras de Negócio</b> do sistema. 
-            O uso da <b>Internet</b> para realização de consultas será permitido.
+            <b>Importante:</b> O banco de dados está em SQLExpress e o arquivo do database está na pasta App_Data, não é necessário nenhuma instalação. Apenas confirme a connection string contida na classe TesteSeusConhecimentos.Infra caso tenha algum problema. 
         </li>     
 
     </ol>

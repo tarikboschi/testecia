@@ -52,7 +52,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - Teste de Conhecimentos - Cresça Brasil / UOL Educação </p>
+                <p>&copy; <%: DateTime.Now.Year %> - Teste de Conhecimentos - Ciatech / UOL Educação </p>
             </div>
         </div>
     </footer>

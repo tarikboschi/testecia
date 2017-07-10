@@ -5,6 +5,7 @@ using System.Text;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
+using System.Configuration;
 
 namespace TesteSeusConhecimentos.Entities
 {
@@ -12,11 +13,11 @@ namespace TesteSeusConhecimentos.Entities
     {
 
         private static ISessionFactory session;
-        private static string connectionString = "Data Source=D-CB-001321\\SQLSERVER2012;Initial Catalog=TesteConhecimento;Integrated Security=False;User ID=sa;Password=123";
-
+        private static string connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|TesteSeusConhecimentos.mdf;Integrated Security=True";
 
         public static ISessionFactory criarSession()
         {
+            
             if (session != null)
                 return session;
 

@@ -119,6 +119,10 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="App_Data\TesteSeusConhecimentos.mdf" />
+    <Content Include="App_Data\TesteSeusConhecimentos_log.ldf">
+      <DependentUpon>TesteSeusConhecimentos.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\boostrap\css\bootstrap-theme.css" />
     <Content Include="Content\boostrap\css\bootstrap-theme.min.css" />
@@ -335,9 +339,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
