@@ -12,9 +12,11 @@ namespace TesteSeusConhecimentos.Entities
         public virtual string LastName { get; set; }
         public virtual string Email { get; set; }
 
+        public virtual IList <Enterprise> Enterprises { get; set; }
+
         public User()
         {
-
+            this.Enterprises = new List<Enterprise>();
         }
 
         public User(int idUser, string name, string lastName, string email)
@@ -24,6 +26,7 @@ namespace TesteSeusConhecimentos.Entities
             this.LastName = lastName;
             this.Email = email;
         }
+
 
         public virtual bool IsNew()
         {

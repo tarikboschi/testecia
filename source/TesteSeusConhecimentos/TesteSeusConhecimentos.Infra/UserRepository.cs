@@ -25,7 +25,6 @@ namespace TesteSeusConhecimentos.Infra
                return (from e in session.Query<User>() select e).ToList();
            }
         }
-
       
         public User GetById(int id)
         {
