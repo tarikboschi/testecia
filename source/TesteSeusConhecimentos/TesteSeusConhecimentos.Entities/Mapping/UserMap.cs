@@ -17,6 +17,7 @@ namespace TesteSeusConhecimentos.Entities.Mapping
             Map(c => c.Name);
             Map(c => c.LastName);
             Map(c => c.Email);
+            HasManyToMany(c => c.Enterprises).LazyLoad().Cascade.SaveUpdate().Table("EnterprisesToUsers");
             Table("TesteSeusConhecimentos.UserData");
         }
        
