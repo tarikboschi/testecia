@@ -11,6 +11,10 @@ namespace TesteSeusConhecimentos.Entities
         public virtual string Name { get; set; }
         public virtual string LastName { get; set; }
         public virtual string Email { get; set; }
+        public virtual string FullName
+        {
+            get { return Name + " " + LastName; }
+        }
 
         public User()
         {

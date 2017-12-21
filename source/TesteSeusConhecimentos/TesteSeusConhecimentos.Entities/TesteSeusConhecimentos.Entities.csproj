@@ -48,8 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enterprise.cs" />
     <Compile Include="FluentSessionFactory.cs" />
+    <Compile Include="Mapping\EnterpriseMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mapping\RelationshipMap.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Mapping\UserMap.cs" />
+    <Compile Include="Relationship.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
