@@ -7,45 +7,63 @@
 // </gerado automaticamente>
 //------------------------------------------------------------------------------
 
-namespace TesteSeusConhecimentos.Web {
+namespace TesteSeusConhecimentos.Web.Infocast {
     
     
-    public partial class SiteMaster {
+    public partial class InfoEmployee {
         
         /// <summary>
-        /// Controle HeadContent.
+        /// Controle formStatus.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl formStatus;
         
         /// <summary>
-        /// Controle A1.
+        /// Controle lbEnterprise.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
+        protected global::System.Web.UI.WebControls.Label lbEnterprise;
         
         /// <summary>
-        /// Controle FeaturedContent.
+        /// Controle ddlEnterprise.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder FeaturedContent;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEnterprise;
         
         /// <summary>
-        /// Controle MainContent.
+        /// Controle lbUser.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Label lbUser;
+        
+        /// <summary>
+        /// Controle ddlUser.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlUser;
+        
+        /// <summary>
+        /// Controle btnRelacionar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRelacionar;
     }
 }

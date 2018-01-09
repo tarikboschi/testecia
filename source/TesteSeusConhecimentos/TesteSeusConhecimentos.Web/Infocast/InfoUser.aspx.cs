@@ -12,7 +12,7 @@ namespace TesteSeusConhecimentos.Web.Infocast
 {
     public partial class InfoUser : System.Web.UI.Page
     {
-        private IUserRepository userRepository;
+        private IRepository<User> userRepository;
 
         private int idUser
         {

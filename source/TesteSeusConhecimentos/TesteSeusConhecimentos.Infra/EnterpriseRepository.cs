@@ -1,104 +1,70 @@
-﻿using System;
+﻿using NHibernate;
+using NHibernate.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NHibernate;
 using TesteSeusConhecimentos.Domain;
 using TesteSeusConhecimentos.Entities;
-using NHibernate.Linq;
 
 namespace TesteSeusConhecimentos.Infra
 {
-    public class UserRepository : IRepository<User>
+    public class EnterpriseRepository : IRepository<Enterprise>
     {
-        //private static IList<User> users;
+        public void Delete(int id)
+        {
+            using (ISession session = FluentSessionFactory.abrirSession())
+            {
+                using (ITransaction transacao = session.BeginTransaction())
+                {
+                    try
+                    {
+                        Enterprise enterprise = session.Get<Enterprise>(id);
+                        if (enterprise != null)
+                        {
+                            session.Delete(enterprise);
+                            transacao.Commit();
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        if (!transacao.WasCommitted)
+                        {
+                            transacao.Rollback();
+                        }
+                        throw new Exception("Erro ao deletar empresa: " + e.Message);
+                    }
+                }
+            }
+        }
 
-        public UserRepository()
-        {          
+        public IList<Enterprise> GetAll()
+        {
+            using (ISession session = FluentSessionFactory.abrirSession())
+            {
+                return (from e in session.Query<Enterprise>() select e).ToList();
+            }
         }
 
         
-        public IList<User> GetAll()
-        {
-           using (ISession session = FluentSessionFactory.abrirSession())
-           {             
-               return (from e in session.Query<User>() select e).ToList();
-           }
-        }
 
-      
-        public User GetById(int id)
+        public Enterprise GetById(int id)
         {
-
             using (ISession session = FluentSessionFactory.abrirSession())
             {
-                return session.Get<User>(id);
+                return session.Get<Enterprise>(id);
             }
         }
 
-       
-        public void Delete(int id) 
-        {           
-
-            using (ISession session = FluentSessionFactory.abrirSession())
-            {
-                using (ITransaction transacao = session.BeginTransaction())
-                {
-                    try
-                    {
-                        User user = session.Get<User>(id);
-                        if (user != null)
-                        {
-                            session.Delete(user);
-                            transacao.Commit();
-                        }                       
-                    }
-                    catch (Exception e)
-                    {
-                        if (!transacao.WasCommitted)
-                        {
-                            transacao.Rollback();
-                        }
-                        throw new Exception("Erro ao deletar usuário: " + e.Message);
-                    }
-                }
-            }
-        }
-
-        public void Save(User user)
+        public void Save(Enterprise enterprise)
         {
-            if (user.IsNew())
-                Add(user);
+            if (enterprise.IsNew())
+                Add(enterprise);
             else
-                Update(user);
+                Update(enterprise);
         }
 
-       
-        private void Add(User user)
-        {
-            using (ISession session = FluentSessionFactory.abrirSession()) 
-            {
-                using (ITransaction transacao = session.BeginTransaction()) 
-                {
-                    try
-                    {
-                        session.Save(user);
-                        transacao.Commit();
-                    }
-                    catch (Exception e) 
-                    {
-                        if(!transacao.WasCommitted)
-                        {
-                            transacao.Rollback();
-                        }
-                        throw new Exception("Erro ao inserir usuário: "+e.Message);
-                    }
-                }
-            }
-        }
-
-
-        private void Update(User user)
+        private void Update(Enterprise enterprise)
         {
             using (ISession session = FluentSessionFactory.abrirSession())
             {
@@ -106,7 +72,7 @@ namespace TesteSeusConhecimentos.Infra
                 {
                     try
                     {
-                        session.Update(user);
+                        session.Update(enterprise);
                         transacao.Commit();
                     }
                     catch (Exception e)
@@ -115,11 +81,35 @@ namespace TesteSeusConhecimentos.Infra
                         {
                             transacao.Rollback();
                         }
-                        throw new Exception("Erro ao atualizar usuário: " + e.Message);
+                        throw new Exception("Erro ao atualizar empresa: " + e.Message);
                     }
                 }
             }
         }
-                       
+
+        private void Add(Enterprise enterprise)
+        {
+            using (ISession session = FluentSessionFactory.abrirSession())
+            {
+                using (ITransaction transacao = session.BeginTransaction())
+                {
+                    try
+                    {
+                        session.Save(enterprise);
+                        transacao.Commit();
+                    }
+                    catch (Exception e)
+                    {
+                        if (!transacao.WasCommitted)
+                        {
+                            transacao.Rollback();
+                        }
+                        throw new Exception("Erro ao inserir empresa: " + e.Message);
+                    }
+                }
+            }
+        }
     }
+
+    
 }

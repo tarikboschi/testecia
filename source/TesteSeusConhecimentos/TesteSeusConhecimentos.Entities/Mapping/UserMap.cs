@@ -9,8 +9,6 @@ namespace TesteSeusConhecimentos.Entities.Mapping
 {
     public class UserMap: ClassMap<User>
     {
-
-
         public UserMap()
         {            
             Id(c => c.IdUser);
@@ -18,6 +16,12 @@ namespace TesteSeusConhecimentos.Entities.Mapping
             Map(c => c.LastName);
             Map(c => c.Email);
             Table("TesteSeusConhecimentos.UserData");
+
+            HasManyToMany(c => c.Enterprises)
+                .Cascade.AllDeleteOrphan()
+                .ParentKeyColumn("IdUser")
+                .ChildKeyColumn("IdEnterprise")
+                .Table("TesteSeusConhecimentos.EmployeeData");
         }
        
     }

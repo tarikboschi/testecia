@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -211,6 +213,10 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Infocast\Employees.aspx" />
+    <Content Include="Infocast\Enterprises.aspx" />
+    <Content Include="Infocast\InfoEmployee.aspx" />
+    <Content Include="Infocast\InfoEnterprise.aspx" />
     <Content Include="Infocast\InfoUser.aspx" />
     <Content Include="Infocast\Users.aspx" />
     <Content Include="packages.config" />
@@ -301,6 +307,34 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\Employees.aspx.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\Employees.aspx.designer.cs">
+      <DependentUpon>Employees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\Enterprises.aspx.cs">
+      <DependentUpon>Enterprises.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\Enterprises.aspx.designer.cs">
+      <DependentUpon>Enterprises.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\InfoEmployee.aspx.cs">
+      <DependentUpon>InfoEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\InfoEmployee.aspx.designer.cs">
+      <DependentUpon>InfoEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\InfoEnterprise.aspx.cs">
+      <DependentUpon>InfoEnterprise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\InfoEnterprise.aspx.designer.cs">
+      <DependentUpon>InfoEnterprise.aspx</DependentUpon>
     </Compile>
     <Compile Include="Infocast\InfoUser.aspx.cs">
       <DependentUpon>InfoUser.aspx</DependentUpon>

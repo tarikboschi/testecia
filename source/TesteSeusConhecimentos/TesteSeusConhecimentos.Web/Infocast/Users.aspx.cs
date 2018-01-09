@@ -5,13 +5,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TesteSeusConhecimentos.Domain;
+using TesteSeusConhecimentos.Entities;
 using TesteSeusConhecimentos.Infra;
 
 namespace TesteSeusConhecimentos.Web.Infocast
 {
     public partial class Users : System.Web.UI.Page
     {
-        private IUserRepository userRepository;
+        private IRepository<User> userRepository;
 
         public Users()
         {
