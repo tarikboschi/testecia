@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ namespace TesteSeusConhecimentos.Entities
         public virtual string Name { get; set; }
         public virtual string LastName { get; set; }
         public virtual string Email { get; set; }
+
+        //public virtual IList<Company> Companies { get; set; }
 
         public User()
         {

@@ -17,6 +17,13 @@ namespace TesteSeusConhecimentos.Entities.Mapping
             Map(c => c.Name);
             Map(c => c.LastName);
             Map(c => c.Email);
+
+            //HasManyToMany(c => c.Companies)
+            //.Table("UserCompany")
+            //.ParentKeyColumn("IdUser")
+            //.ChildKeyColumn("IdCompany")
+            //.Inverse();
+
             Table("TesteSeusConhecimentos.UserData");
         }
        
