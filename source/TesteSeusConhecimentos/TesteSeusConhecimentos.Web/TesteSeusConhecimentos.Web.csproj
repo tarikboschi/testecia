@@ -211,7 +211,11 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Infocast\InfoCompany.aspx" />
+    <Content Include="Infocast\InfoRelationShip.aspx" />
     <Content Include="Infocast\InfoUser.aspx" />
+    <Content Include="Infocast\Companies.aspx" />
+    <Content Include="Infocast\RelationShips.aspx" />
     <Content Include="Infocast\Users.aspx" />
     <Content Include="packages.config" />
     <Content Include="Content\boostrap\css\bootstrap-theme.css.map" />
@@ -302,12 +306,40 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infocast\InfoCompany.aspx.cs">
+      <DependentUpon>InfoCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\InfoCompany.aspx.designer.cs">
+      <DependentUpon>InfoCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\InfoRelationShip.aspx.cs">
+      <DependentUpon>InfoRelationShip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\InfoRelationShip.aspx.designer.cs">
+      <DependentUpon>InfoRelationShip.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Infocast\InfoUser.aspx.cs">
       <DependentUpon>InfoUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Infocast\InfoUser.aspx.designer.cs">
       <DependentUpon>InfoUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\Companies.aspx.cs">
+      <DependentUpon>Companies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\Companies.aspx.designer.cs">
+      <DependentUpon>Companies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\RelationShips.aspx.cs">
+      <DependentUpon>RelationShips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\RelationShips.aspx.designer.cs">
+      <DependentUpon>RelationShips.aspx</DependentUpon>
     </Compile>
     <Compile Include="Infocast\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
