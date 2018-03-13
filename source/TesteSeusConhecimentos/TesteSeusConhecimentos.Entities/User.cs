@@ -12,6 +12,8 @@ namespace TesteSeusConhecimentos.Entities
         public virtual string LastName { get; set; }
         public virtual string Email { get; set; }
 
+        public virtual IList<Enterprise> Enterprises { get; set; }
+
         public User()
         {
 

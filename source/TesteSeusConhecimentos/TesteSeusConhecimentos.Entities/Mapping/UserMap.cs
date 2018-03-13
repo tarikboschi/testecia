@@ -18,6 +18,11 @@ namespace TesteSeusConhecimentos.Entities.Mapping
             Map(c => c.LastName);
             Map(c => c.Email);
             Table("TesteSeusConhecimentos.UserData");
+
+            HasManyToMany(x => x.Enterprises)
+                .Cascade.All()
+                .Inverse()
+                .Table("TesteSeusConhecimentos.EnterpriseXUserData");
         }
        
     }

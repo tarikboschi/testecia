@@ -6,6 +6,7 @@ using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using System.Configuration;
+using System.Reflection;
 
 namespace TesteSeusConhecimentos.Entities
 {
@@ -23,7 +24,8 @@ namespace TesteSeusConhecimentos.Entities
 
             IPersistenceConfigurer configDB = MsSqlConfiguration.MsSql2012.ConnectionString(connectionString);
 
-            var configMap = Fluently.Configure().Database(configDB).Mappings(c => c.FluentMappings.AddFromAssemblyOf<Mapping.UserMap>());
+            //var configMap = Fluently.Configure().Database(configDB).Mappings(c => c.FluentMappings.AddFromAssemblyOf<Mapping.UserMap>());
+            var configMap = Fluently.Configure().Database(configDB).Mappings(c => c.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()));
             session = configMap.BuildSessionFactory();
 
             return session;
