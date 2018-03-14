@@ -13,7 +13,8 @@ namespace TesteSeusConhecimentos.Entities
     {
 
         private static ISessionFactory session;
-        private static string connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|TesteSeusConhecimentos.mdf;Integrated Security=True";
+        private static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|TesteSeusConhecimentos.mdf;Integrated Security=True";
+
 
         public static ISessionFactory criarSession()
         {
@@ -23,7 +24,10 @@ namespace TesteSeusConhecimentos.Entities
 
             IPersistenceConfigurer configDB = MsSqlConfiguration.MsSql2012.ConnectionString(connectionString);
 
-            var configMap = Fluently.Configure().Database(configDB).Mappings(c => c.FluentMappings.AddFromAssemblyOf<Mapping.UserMap>());
+            var configMap = Fluently.Configure().Database(configDB)
+                .Mappings(c => c.FluentMappings.AddFromAssemblyOf<Mapping.UserMap>())
+                .Mappings(c => c.FluentMappings.AddFromAssemblyOf<Mapping.EnterpriseMap>())
+                .Mappings(c => c.FluentMappings.AddFromAssemblyOf<Mapping.RelationshipMap>());
             session = configMap.BuildSessionFactory();
 
             return session;
