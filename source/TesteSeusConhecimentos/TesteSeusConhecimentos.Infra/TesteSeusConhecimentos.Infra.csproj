@@ -60,6 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase\DataBaseFactory.cs" />
+    <Compile Include="EnterprisesRepository.cs" />
+    <Compile Include="RelationshipRepository.cs" />
+    <Compile Include="Repository.cs" />
     <Compile Include="UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
