@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using FluentNHibernate.Mapping;
-using TesteSeusConhecimentos.Entities;
+﻿using FluentNHibernate.Mapping;
 
 namespace TesteSeusConhecimentos.Entities.Mapping
 {
     public class UserMap: ClassMap<User>
     {
-
-
         public UserMap()
         {            
             Id(c => c.IdUser);
@@ -18,7 +11,6 @@ namespace TesteSeusConhecimentos.Entities.Mapping
             Map(c => c.LastName);
             Map(c => c.Email);
             Table("TesteSeusConhecimentos.UserData");
-        }
-       
+        }       
     }
 }

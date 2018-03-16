@@ -2,5 +2,5 @@
 
 namespace TesteSeusConhecimentos.Domain
 {
-    public interface IUserRepository : IRepository<User> { }
+    public interface IEnterprisesRepository : IRepository<Enterprise> { }
 }
