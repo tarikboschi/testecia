@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using TesteSeusConhecimentos.Domain;
 using TesteSeusConhecimentos.Entities;
 using TesteSeusConhecimentos.Infra;
@@ -12,7 +7,7 @@ namespace TesteSeusConhecimentos.Web.Infocast
 {
     public partial class InfoUser : System.Web.UI.Page
     {
-        private IUserRepository userRepository;
+        private IRepository<User> userRepository;
 
         private int idUser
         {
@@ -50,7 +45,7 @@ namespace TesteSeusConhecimentos.Web.Infocast
 
         private void UpdateForm()
         {
-            User user = this.userRepository.GetById(idUser);
+            User user = this.userRepository.GetById<User>(idUser);
 
             if (user != null)
             {
@@ -65,7 +60,7 @@ namespace TesteSeusConhecimentos.Web.Infocast
         {
             User user = new User(idUser, txtName.Text, txtLastName.Text, txtEmail.Text);
             userRepository.Save(user);
-            
+
             Response.Redirect("~/Infocast/Users.aspx");
         }
     }
