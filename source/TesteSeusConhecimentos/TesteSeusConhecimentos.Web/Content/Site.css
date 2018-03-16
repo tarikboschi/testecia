@@ -828,3 +828,10 @@ tr.pager td {
 }
 
 /* END: Custom */
+
+.fSet{
+    border: 2px !important;
+    border-color:#000 !important;
+     border-style: solid !important;
+     padding:0 20px 0 !important;
+}
