@@ -40,6 +40,7 @@
       <HintPath>..\packages\NHibernate.4.0.2.4000\lib\net40\NHibernate.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,8 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DtoBase.cs" />
+    <Compile Include="Enterprise.cs" />
     <Compile Include="FluentSessionFactory.cs" />
+    <Compile Include="Mapping\EnterpriseMap.cs" />
+    <Compile Include="Mapping\RelationshipMap.cs" />
     <Compile Include="Mapping\UserMap.cs" />
+    <Compile Include="Relationship.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
