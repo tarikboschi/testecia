@@ -229,6 +229,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Infocast\Enterprises.aspx" />
     <Content Include="Infocast\InfoUser.aspx" />
     <Content Include="Infocast\Users.aspx" />
     <Content Include="packages.config" />
@@ -319,6 +320,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\Enterprises.aspx.cs">
+      <DependentUpon>Enterprises.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\Enterprises.aspx.designer.cs">
+      <DependentUpon>Enterprises.aspx</DependentUpon>
     </Compile>
     <Compile Include="Infocast\InfoUser.aspx.cs">
       <DependentUpon>InfoUser.aspx</DependentUpon>
