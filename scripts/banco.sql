@@ -96,7 +96,51 @@ CREATE TABLE [TesteSeusConhecimentos].[UserData](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
+
+GO  
+
+
+CREATE TABLE [TesteSeusConhecimentos].[EnterpriseData] (
+    [IdEnterprise]      INT           IDENTITY (1, 1) NOT NULL,
+    [Name]              VARCHAR (250) NULL,
+    [StreetAdress]      VARCHAR (500) NULL,
+    [City]              VARCHAR (200) NULL,
+    [State]             VARCHAR (50)  NULL,
+    [ZipCode]           VARCHAR (8)   NULL,
+    [CorporateActivity] VARCHAR (500) NULL,
+    PRIMARY KEY CLUSTERED ([IdEnterprise] ASC)
+)
+
 GO
+
+
+
+CREATE TABLE [TesteSeusConhecimentos].[EnterpriseUserData] (
+    [IdEnterpriseUser] INT IDENTITY (1, 1) NOT NULL,
+    [IdEnterprise]     INT NOT NULL,
+    [IdUser]           INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([IdEnterpriseUser] ASC),
+    FOREIGN KEY ([IdEnterprise]) REFERENCES [TesteSeusConhecimentos].[EnterpriseData] ([IdEnterprise]),
+    FOREIGN KEY ([IdUser]) REFERENCES [TesteSeusConhecimentos].[UserData] ([IdUser])
+)
+
+GO
+
+CREATE VIEW [TesteSeusConhecimentos].vw_EnterprisesUsers 
+AS
+    SELECT 
+        e.name as enterpriseName,
+        e.IdEnterprise,
+        u.name as userName,
+        u.IdUser,
+        eu.IdEnterpriseUser
+    FROM  TesteSeusConhecimentos.EnterpriseUserData eu  
+    INNER JOIN TesteSeusConhecimentos.EnterpriseData e ON  e.IdEnterprise = eu.IdEnterprise
+    INNER JOIN TesteSeusConhecimentos.UserData u ON u.IdUser =  eu.IdUser
+
+GO
+
+
 SET ANSI_PADDING OFF
 GO
 USE [master]

@@ -211,6 +211,10 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Infocast\Enterprises.aspx" />
+    <Content Include="Infocast\EnterprisesUsers.aspx" />
+    <Content Include="Infocast\InfoEnterprise.aspx" />
+    <Content Include="Infocast\InfoEnterpriseUser.aspx" />
     <Content Include="Infocast\InfoUser.aspx" />
     <Content Include="Infocast\Users.aspx" />
     <Content Include="packages.config" />
@@ -301,6 +305,34 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\Enterprises.aspx.cs">
+      <DependentUpon>Enterprises.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\Enterprises.aspx.designer.cs">
+      <DependentUpon>Enterprises.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\EnterprisesUsers.aspx.cs">
+      <DependentUpon>EnterprisesUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\EnterprisesUsers.aspx.designer.cs">
+      <DependentUpon>EnterprisesUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\InfoEnterprise.aspx.cs">
+      <DependentUpon>InfoEnterprise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\InfoEnterprise.aspx.designer.cs">
+      <DependentUpon>InfoEnterprise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Infocast\InfoEnterpriseUser.aspx.cs">
+      <DependentUpon>InfoEnterpriseUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Infocast\InfoEnterpriseUser.aspx.designer.cs">
+      <DependentUpon>InfoEnterpriseUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Infocast\InfoUser.aspx.cs">
       <DependentUpon>InfoUser.aspx</DependentUpon>
